@@ -1,0 +1,64 @@
+<section id="place-order" class="order-section">
+    <div class="container">
+      <h2>Place an Order</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" [(ngModel)]="orderData.name" name="name" type="text" class="form-control" placeholder="Enter your full name" required>
+          <div *ngIf="!orderData.name && submitted" class="error">
+            Full Name is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" [(ngModel)]="orderData.email" name="email" type="email" class="form-control" placeholder="Enter your email address" required>
+          <div *ngIf="!orderData.email && submitted" class="error">
+            <div *ngIf="!isValidEmail(orderData.email)">Email is required or invalid.</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input id="phone" [(ngModel)]="orderData.phone" name="phone" type="text" class="form-control" placeholder="Enter your phone number" required>
+          <div *ngIf="!orderData.phone && submitted" class="error">
+            Phone Number is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="city">City</label>
+          <select id="city" [(ngModel)]="orderData.city" name="city" class="form-control" (change)="onCityChange()" required>
+            <option *ngFor="let city of cities" [value]="city.name">{{ city.name }}</option>
+          </select>
+          <div *ngIf="!orderData.city && submitted" class="error">
+            City is required.
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" [(ngModel)]="orderData.address" name="address" type="text" class="form-control" placeholder="Enter Address" required>
+            <div *ngIf="!orderData.address && submitted" class="error">
+              Address is required.
+            </div>
+          </div>
+    
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input id="weight" [(ngModel)]="orderData.weight" name="weight" type="number" class="form-control" placeholder="Enter the weight of the package" (change)="calculatePrice()" required>
+          <div *ngIf="!orderData.weight && submitted" class="error" >
+            Weight is required.
+          </div>
+        </div>
+  
+        <div >
+          <label >Total Price</label><br>
+    <div id="total_prc"><b> {{totalPrice | currency:'INR'}}</b></div>   
+        </div>
+  <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </section>

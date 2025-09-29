@@ -1,0 +1,61 @@
+<section class="dashboard">
+    <div class="container">
+      <h1>Customer Dashboard</h1>
+      <div class="dashboard-content">
+        <div class="sidebar">
+          <ul>
+            <li><a routerLink="/dashboard/order-summary">Order Summary</a></li>
+            <li><a routerLink="/dashboard/track-courier">Track Your Courier</a></li>
+            <li><a routerLink="/dashboard/profile-settings">Profile Settings</a></li>
+          </ul>
+        </div>
+        <div class="main-content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Basic Styling -->
+  <style>
+    .dashboard {
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .dashboard-content {
+      display: flex;
+    }
+  
+    .sidebar {
+      width: 25%;
+      background: #fff;
+      padding: 15px;
+      border-right: 1px solid #ddd;
+    }
+  
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+  
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  
+    .main-content {
+      width: 75%;
+      padding: 15px;
+    }
+  </style>
+  

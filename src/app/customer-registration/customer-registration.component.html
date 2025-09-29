@@ -1,0 +1,77 @@
+<section id="auth" class="auth-section">
+    <div class="container">
+      <div class="form-container">
+        <div *ngIf="isLogin">
+          <h2>Login</h2>
+          <form (ngSubmit)="onLoginSubmit()">
+            <div class="form-group">
+              <label for="loginEmail">Email Address</label>
+              <input id="loginEmail" [(ngModel)]="loginData.email" name="loginEmail" type="email" class="form-control" placeholder="Enter your email address" required>
+              <div *ngIf="!loginData.email && loginSubmitted" class="error">
+                <div *ngIf="!isValidEmail(loginData.email)">Email is required or invalid.</div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" [(ngModel)]="loginData.password" name="loginPassword" type="password" class="form-control" placeholder="Enter your password" required minlength="6">
+              <div *ngIf="!loginData.password && loginSubmitted" class="error">
+                <div *ngIf="!loginData.password">Password is required.</div>
+                <div *ngIf="loginData.password && loginData.password.length < 6">Password must be at least 6 characters long.</div>
+              </div>
+            </div>
+  <br>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+  
+        <div *ngIf="!isLogin">
+          <h2>Create an Account</h2>
+          <form (ngSubmit)="onRegisterSubmit()">
+            <div class="form-group">
+              <label for="registerName">Full Name</label>
+              <input id="registerName" [(ngModel)]="registerData.name" name="registerName" type="text" class="form-control" placeholder="Enter your full name" required>
+              <div *ngIf="!registerData.name && registerSubmitted" class="error">
+                Full Name is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="registerEmail">Email Address</label>
+              <input id="registerEmail" [(ngModel)]="registerData.email" name="registerEmail" type="email" class="form-control" placeholder="Enter your email address" required>
+              <div *ngIf="!registerData.email && registerSubmitted" class="error">
+                <div *ngIf="!isValidEmail(registerData.email)">Email is required or invalid.</div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="registerPhone">Phone Number</label>
+              <input id="registerPhone" [(ngModel)]="registerData.phone" name="registerPhone" type="text" class="form-control" placeholder="Enter your phone number" required>
+              <div *ngIf="!registerData.phone && registerSubmitted" class="error">
+                Phone Number is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="registerPassword">Password</label>
+              <input id="registerPassword" [(ngModel)]="registerData.password" name="registerPassword" type="password" class="form-control" placeholder="Enter your password" required minlength="6">
+              <div *ngIf="!registerData.password && registerSubmitted" class="error">
+                <div *ngIf="!registerData.password">Password is required.</div>
+                <div *ngIf="registerData.password && registerData.password.length < 6">Password must be at least 6 characters long.</div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
+        <br>
+        <div class="toggle-link">
+          <a (click)="toggleForm()">{{ isLogin ? 'Create an Account' : 'Already have an account? Login' }}</a>
+        </div>
+      </div>
+    </div>
+  </section>

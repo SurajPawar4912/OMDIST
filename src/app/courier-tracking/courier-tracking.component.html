@@ -1,0 +1,161 @@
+<section id="courier-tracking" class="tracking-section">
+    <div class="container">
+      <h2>Track Your Courier</h2>
+      <form (ngSubmit)="onTrack()">
+        <div class="form-group">
+          <label for="trackingId">Tracking ID</label>
+          <input id="trackingId" [(ngModel)]="trackingId" name="trackingId" type="text" class="form-control" placeholder="Enter your tracking ID" required>
+          <div *ngIf="submitted && !trackingId" class="error">
+            Tracking ID is required.
+          </div>
+        </div>
+  <br>
+  <div class="row">
+        <div class="form-group col-md-1">
+          <button type="submit" class="btn btn-primary">Track</button>
+        </div>
+        <div class="form-group col-md-1">
+            <button type="button" class="btn btn-primary" (click)="backBtn()">Back</button>
+          </div>
+  </div>
+      </form>
+  
+      <div *ngIf="tracking_data">
+        
+<div class="container mt-5">
+  <div class="card">
+      <div class="card-header bg-primary text-white">
+          <h4>Parcel Tracking Details</h4>
+      </div>
+      <div class="card-body">
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Tracking ID:</strong>
+                  <p id="trackingId">{{tracking_data.tracking_id}}</p>
+              </div>
+              <div class="col-md-6">
+                  <strong>Status:</strong>
+                  <p id="status"><strong>{{tracking_data.parcel_sts}}</strong></p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Sender's Name:</strong>
+                  <p id="senderName">{{tracking_data.cust_name}}</p>
+              </div>
+              <div class="col-md-6">
+                  <strong>Receiver's Name:</strong>
+                  <p id="receiverName">{{tracking_data.recevier_name}}</p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Origin:</strong>
+                  <p id="origin">{{tracking_data.from_loc}}</p>
+              </div>
+              <div class="col-md-6">
+                  <strong>Destination:</strong>
+                  <p id="destination">{{tracking_data.to_loc}}</p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Shipping Date:</strong>
+                  <p id="shippingDate">{{tracking_data.order_date | date:'dd-MM-YYYY'}}</p>
+              </div>
+              <div class="col-md-6">
+                  <strong>Estimated Delivery:</strong>
+                  <p id="estimatedDelivery">{{tracking_data.delivery_date | date:'dd-MM-YYYY'}}</p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Parcel Weight:</strong>
+                  <p id="parcelWeight">{{tracking_data.weight}} kg</p>
+              </div>
+              <div class="col-md-6">
+                <strong>Shipping Method:</strong>
+                <p id="shippingMethod">Air</p>
+            </div>
+          </div>
+
+           <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Delivery Type:</strong>
+                  <p id="deliveryType">{{tracking_data.shipping_method}}</p>
+              </div>
+              <div class="col-md-6">
+                  <strong>Handling Instructions:</strong>
+                  <p id="handlingInstructions">{{tracking_data.extra_remark}}</p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+             
+              <div class="col-md-6">
+                  <strong>Amount:</strong>
+                  <p id="insurance">{{tracking_data.price}}</p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+            
+              <div class="col-md-6">
+                  <strong>Last Update:</strong>
+                  <p id="lastUpdate">{{tracking_data.last_update | date:'dd-MM-YYYY'}}</p>
+              </div>
+          </div>
+
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <strong>Courier:</strong>
+                  <p id="courier">{{tracking_data.Courier}}</p>
+              </div>
+              
+          </div>
+          <div class="col-md-6">
+            <strong>Payment Status:</strong>
+            <p id="insurance">{{payment_sts}}</p>
+        </div>
+        <div class="col-md-6">
+          <strong>Amount:</strong>
+          <p id="insurance">{{ get_amount(tracking_data.price) | currency:"INR"}}</p>
+       </div>
+
+       <div class="col-md-6" *ngIf="payment_data && payment_data.order_id">
+        <strong>Payment Order Id:</strong>
+        <p id="insurance">{{ payment_data.order_id?payment_data.order_id:0 }}</p>
+       </div>
+       <div class="col-md-6" *ngIf="payment_data && payment_data.payment_ref_id">
+        <strong>Payment Ref Id:</strong>
+        <p id="insurance">{{ payment_data.payment_ref_id }}</p>
+       </div>
+
+          <div class="row mb-3" *ngIf="payment_sts!='paid'">
+            <div class="col-md-12">
+              <button class="btn btn-primary" (click)="pay_now(tracking_data)">Pay Now</button>
+            </div>
+        </div>
+
+        <!-- <div class="row mb-3" >
+          <div class="col-md-12">
+            <button class="btn btn-success" (click)="share_link(tracking_data)">
+              <img src="../../assets/img/wp.png" id="wp_img">
+             <strong> Share Link </strong>
+
+             </button>
+          </div>
+      </div> -->
+
+      </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </section>

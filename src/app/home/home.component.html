@@ -1,0 +1,690 @@
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="index.html">
+            {{BusinessName}}
+            <!-- <img src="assets/img/gallery/logo.png" height="45" alt="logo" /> -->
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#services">Our Services</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#aboutus">About Us</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#policy">Policy</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#conditions">Terms & Conditions</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#feedback">Contact Us</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Find Us</a></li>
+            </ul>
+            <!-- <div class="dropdown d-none d-lg-block">
+              <button class="btn bg-soft-warning ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-search text-warning"></i></button>
+              <div class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton1" style="top:55px">
+                <form>
+                  <input class="form-control border-200" type="search" placeholder="Search" aria-label="Search" style="background:#FDF1DF;" />
+                </form>
+              </div>
+            </div> -->
+            <!-- <a class="btn btn-primary order-1 order-lg-0 ms-lg-3" (click)="goToRegister()">Sign In/Up</a> -->
+            <!-- <form class="d-flex my-3 d-block d-lg-none">
+              <input class="form-control me-2 border-200 bg-light" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>  -->
+          </div>
+        </div>
+      </nav>
+      <section class="py-xxl-10 pb-0" id="home">
+        <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/hero-header-bg.png);background-position:top center;background-size:cover;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/illustrations/hero.png" alt="hero-header" /></div>
+            <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-8">
+              <h1 class="fw-normal fs-6 fs-xxl-7">A trusted provider of </h1>
+              <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2">courier services.</h1>
+              <p class="fs-1 mb-5">We deliver your products safely to <br />your home in a reasonable time. </p>
+              
+              <button class="btn btn-primary me-2"  role="button" (click)="goToTrackOrder()">Track Order<i class="fa fa-arrow-right ms-2"></i></button>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-7" id="services" container-xl="container-xl">
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5 text-center mb-3">
+              <h5 class="text-danger">SERVICES</h5>
+              <h2>Our services for you</h2>
+            </div>
+          </div>
+          <div class="row h-100 justify-content-center">
+            <div class="col-md-4 pt-4 px-md-2 px-lg-3">
+              <div class="card h-100 px-lg-5 card-span">
+                <div class="card-body d-flex flex-column justify-content-around">
+                  <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/services-1.svg" alt="..." />
+                    <h5 class="my-4">Personal Product Delivery</h5>
+                  </div>
+                  <p>Offering home delivery around the city, where your products will be at your doorstep within 48-72 hours.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Corporate goods
+                    </li>
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Shipment
+                    </li>
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Accesories
+                    </li>
+                  </ul>
+                  <div class="text-center my-5">
+                    <div class="d-grid">
+                      <button class="btn btn-outline-danger" type="button" (click)="open_modal('quote')">Get Quote</button>
+                    </div>
+                    <div class="d-grid">
+                    <a class="nav-link" href="#policy"> <button class="btn btn-outline-danger" type="button" >Read Policy</button></a>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 pt-4 px-md-2 px-lg-3">
+              <div class="card h-100 px-lg-5 card-span">
+                <div class="card-body d-flex flex-column justify-content-around">
+                  <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/services-2.svg" alt="..." />
+                    <h5 class="my-4">Daily Product Delivery</h5>
+                  </div>
+                  <p>Reliable daily transportation of goods to your customers, ensuring consistent, timely deliveries to meet your business needs,where your products will be at your doorstep within 48-72 hours.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Unlimited Bandwidth
+                    </li>
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Encrypted Connection
+                    </li>
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Yes Traffic Logs
+                    </li>
+                  </ul>
+                  <div class="text-center my-5">
+                    <div class="d-grid">
+                      <button class="btn btn-danger hover-top btn-glow border-0" type="button" (click)="open_modal('quote')">Get Quote</button>
+                    </div>
+                    <div class="d-grid">
+                      <a class="nav-link" href="#policy"> <button class="btn btn-outline-danger" type="button" >Read Policy</button></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 pt-4 px-md-2 px-lg-3">
+              <div class="card h-100 px-lg-5 card-span">
+                <div class="card-body d-flex flex-column justify-content-around">
+                  <div class="text-center pt-5"><img class="img-fluid" src="assets/img/icons/services-3.svg" alt="..." />
+                    <h5 class="my-4">Business Product Delivery</h5>
+                  </div>
+                  <p>You can trust us to safely deliver your most sensitive documents to the specific area in a short time.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Unlimited Bandwidth
+                    </li>
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Encrypted Connection
+                    </li>
+                    <li class="mb-2"><span class="me-2"><i class="fa fa-circle text-primary" style="font-size:.5rem"></i></span>Yes Traffic Logs
+                    </li>
+                  </ul>
+                  <div class="text-center my-5">
+                    <div class="d-grid">
+                      <button class="btn btn-outline-danger" type=" button" (click)="open_modal('quote')">Get Quote</button>
+                    </div>
+                    <div class="d-grid">
+                      <a class="nav-link" href="#policy"> <button class="btn btn-outline-danger" type="button" >Read Policy</button></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <!-- <section class="pt-7 pb-0">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-lg mb-5">
+              <div class="text-center"><img src="assets/img/icons/awards.png" alt="..." />
+                <h1 class="text-primary mt-4">26+</h1>
+                <h5 class="text-800">Awards won</h5>
+              </div>
+            </div>
+            <div class="col-6 col-lg mb-5">
+              <div class="text-center"><img src="assets/img/icons/states.png" alt="..." />
+                <h1 class="text-primary mt-4">65+</h1>
+                <h5 class="text-800">States covered</h5>
+              </div>
+            </div>
+            <div class="col-6 col-lg mb-5">
+              <div class="text-center"><img src="assets/img/icons/clients.png" alt="..." />
+                <h1 class="text-primary mt-4">689K+</h1>
+                <h5 class="text-800">Happy clients</h5>
+              </div>
+            </div>
+            <div class="col-6 col-lg mb-5">
+              <div class="text-center"><img src="assets/img/icons/goods.png" alt="..." />
+                <h1 class="text-primary mt-4">130M+</h1>
+                <h5 class="text-800">Goods delivered</h5>
+              </div>
+            </div>
+            <div class="col-6 col-lg mb-5">
+              <div class="text-center"><img src="assets/img/icons/business.png" alt="..." />
+                <h1 class="text-primary mt-4">130M+</h1>
+                <h5 class="text-800">Business hours</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <!-- <section>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="card bg-dark text-white py-4 py-sm-0"><img class="w-100" src="assets/img/gallery/video.png" alt="video" />
+                <div class="card-img-overlay bg-dark-gradient d-flex flex-column flex-center"><img src="assets/img/icons/play.png" width="80" alt="play" />
+                  <h5 class="text-primary">FASTEST DELIVERY</h5>
+                  <p class="text-center">You can get your valuable item in the fastest period of<br class="d-none d-sm-block" />time with safety. Because your emergency<br class="d-none d-sm-block" />is our first priority.</p><a class="stretched-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content overflow-hidden">
+                        <div class="modal-header p-0">
+                          <div class="ratio ratio-16x9" id="exampleModalLabel">
+                            <iframe src="https://www.youtube.com/embed/TlcP2aTOp-Q" title="YouTube video" allowfullscreen="allowfullscreen"></iframe>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section> -->
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <section id="aboutus" class="about-us-section">
+        <div class="container">
+
+
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-5 text-center mb-3">
+                  <h5 class="text-danger">ABOUT US</h5>
+                  <h2>About {{BusinessName}}</h2>
+                </div>
+              </div>
+       
+          <p>At {{BusinessName}}, we are committed to delivering reliable, fast, and efficient courier services across the region. With years of experience in logistics and customer satisfaction, we strive to connect people and businesses through timely deliveries.</p>
+      
+          <!-- Mission -->
+          <div class="mission">
+            <h3>Our Mission</h3>
+            <p>Our mission is to revolutionize the courier and logistics industry by offering affordable, reliable, and fast delivery solutions, helping businesses and individuals send packages with ease. We aim to create lasting relationships with our customers through top-notch services and a dedicated customer support team.</p>
+          </div>
+      
+          <!-- Vision -->
+          <div class="vision">
+            <h3>Our Vision</h3>
+            <p>Our vision is to become a leading courier service provider known for exceptional delivery accuracy and customer satisfaction, embracing innovation and technology to set new industry standards. We envision a world where logistics is seamless, sustainable, and accessible to all.</p>
+          </div>
+      
+          <!-- Core Values -->
+          <div class="core-values">
+            <h3>Our Core Values</h3>
+            <ul>
+              <li><strong>Customer Satisfaction:</strong> We place our customers at the heart of everything we do, striving to exceed their expectations with every delivery.</li>
+              <li><strong>Integrity:</strong> We operate with honesty and transparency in all our interactions, ensuring trust and reliability.</li>
+              <li><strong>Innovation:</strong> We continuously seek innovative solutions to enhance our services, improve efficiency, and stay ahead of industry trends.</li>
+              <li><strong>Timeliness:</strong> We believe in the importance of timely deliveries, ensuring packages reach their destination on schedule, every time.</li>
+              <li><strong>Environmental Responsibility:</strong> We are committed to reducing our environmental impact by adopting eco-friendly practices wherever possible.</li>
+            </ul>
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <p>For more information about {{BusinessName}} or to inquire about our services, please feel free to contact us.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="policy" class="payment-policy-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-5 text-center mb-3">
+                  <h5 class="text-danger">PAYMENT POLICY</h5>
+                  <h2>Our payment policy for you</h2>
+                </div>
+              </div>
+         
+          
+          <p>We value your trust and ensure that your payment experience with us is secure and transparent. Below are the detailed payment terms, including conditions for refunds, cancellations, and acceptable payment methods.</p>
+          
+     
+          <!-- Refund Policy -->
+          <div class="refund-policy">
+            <h3>Refund Policy</h3>
+            <p>Our refund policy is outlined below:</p>
+            <ul>
+              <li>Refunds are applicable only in cases of service cancellation within 24 hours of booking, provided that the service hasn't been initiated.</li>
+              <li>Refunds will be processed to the original payment method used during the purchase.</li>
+              <li>Refunds typically take <strong>2-4 business days </strong> to credit amount in your bank account.</li>
+            </ul>
+            <button class="btn btn-primary" (click)="open_modal('refund')">Request For Refund</button>
+          </div>
+      
+          <!-- Cancellation Policy -->
+          <div class="cancellation-policy">
+            <h3>Cancellation Policy</h3>
+            <p>You may cancel your service request under the following conditions:</p>
+            <ul>
+              <li>Cancellations must be made within 24 hours of booking.</li>
+              <li>If the service has already been initiated, cancellation may not be possible, and no refunds will be issued.</li>
+              <li>Cancellations can be requested by contacting our customer support.</li>
+            </ul>
+            <button class="btn btn-primary" (click)="open_modal('cancel')">Request For Cancel</button>
+          </div>
+
+                    <!-- Cancellation Policy -->
+                    <div class="cancellation-policy">
+                      <h3>Privacy Policy</h3>
+                      <p>At {{BusinessName}}, we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our courier services or visit our website. Please read this policy carefully to understand our views and practices regarding your personal information.</p>
+
+                      <h2>1. Information We Collect</h2>
+                      <p>We may collect the following types of personal information when you use our services or contact us:</p>
+                      <ul>
+                          <li><strong>Personal Identification Information:</strong> Name, email address, phone number, postal address, etc.</li>
+                          <li><strong>Payment Information:</strong> Details of transactions made using our accepted payment methods, but we do not store sensitive information like credit/debit card numbers.</li>
+                          <li><strong>Service-Related Information:</strong> Package details, delivery address, and other data required to fulfill our courier services.</li>
+                          <li><strong>Technical Data:</strong> IP addresses, browser type, and usage data collected automatically when you visit our website.</li>
+                      </ul>
+                  
+                      <h2>2. How We Use Your Information</h2>
+                      <p>{{BusinessName}} uses the information we collect for the following purposes:</p>
+                      <ul>
+                          <li>To process your service requests, including bookings, payments, and refunds.</li>
+                          <li>To improve and personalize our services based on user preferences.</li>
+                          <li>To contact you with service-related updates, support, and notifications.</li>
+                          <li>To comply with legal obligations or protect against fraud.</li>
+                      </ul>
+                  
+                      <h2>3. Sharing of Information</h2>
+                      <p>We do not sell, trade, or rent your personal information to third parties. However, we may share your data in the following cases:</p>
+                      <ul>
+                          <li>With <strong>third-party service providers</strong> such as payment gateway partners to process transactions securely.</li>
+                          <li>With <strong>courier partners or agents</strong> for delivery-related purposes.</li>
+                          <li>To comply with legal requirements or to protect our rights, property, or safety.</li>
+                      </ul>
+                  
+                      <h2>4. Data Security</h2>
+                      <p>We are committed to ensuring that your information is secure. All transactions made on our website are processed through secure SSL encryption. Your payment details are handled directly by third-party gateways and are not stored on our servers.</p>
+                  
+                      <h2>5. Retention of Data</h2>
+                      <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy, including complying with legal, accounting, or reporting requirements.</p>
+                  
+                      <h2>6. Your Rights</h2>
+                      <p>You have the right to:</p>
+                      <ul>
+                          <li>Access, correct, or delete your personal information.</li>
+                          <li>Withdraw your consent to data processing at any time, subject to legal restrictions.</li>
+                          <li>Lodge a complaint with a supervisory authority if you feel your rights have been infringed.</li>
+                      </ul>
+                  
+                      <h2>7. Changes to This Privacy Policy</h2>
+                      <p>{{BusinessName}} reserves the right to modify this privacy policy at any time. Any changes will be posted on this page, and, where appropriate, notified to you by email.</p>
+                  
+                      <h2>8. Contact Us</h2>
+                      <p>If you have any questions about this privacy policy or how your personal information is handled, please contact us at:</p>
+                      <ul>
+                          <li><strong>Email:</strong><a id="alink" href="mailto:{{support_email}}"> {{support_email}}</a></li>
+                          <li><strong>Phone:</strong><a id="alink" href="tel:{{contact_no}}">{{contact_no}}</a> </li>
+                          <li><strong>Address:</strong> {{businessAddress}}</li>
+                      </ul>
+                    </div>
+      
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                      <h3>Payment Methods</h3>
+                      <p>We accept the following payment methods:</p>
+                      <ul>
+                        <li>Credit Cards (Visa, MasterCard, American Express)</li>
+                        <li>Debit Cards</li>
+                        <li>Net Banking</li>
+                        <li>UPI Payments (Google Pay, PhonePe, PayTM)</li>
+                        <li>Wallet Payments (PayTM, Amazon Pay, etc.)</li>
+                      </ul>
+                    </div>
+
+          <!-- Payment Gateway Terms & Conditions -->
+          <div class="payment-gateway-terms">
+            <h3>Payment Gateway Terms & Conditions</h3>
+            <p>Our services make use of third-party payment gateways. By using these gateways, you agree to the following terms:</p>
+            <ul>
+              <li>Your payment details are processed securely by our third-party payment gateway partners.</li>
+              <li>We do not store your payment details, such as card numbers, on our servers.</li>
+              <li>All transactions are processed through secure SSL encryption to protect your information.</li>
+              <li>The payment gateway provider’s terms and conditions apply to all transactions. You can review their policies .</li>
+            </ul>
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <p>If you have any questions or concerns about our payment policy, please feel free to contact us.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="conditions" class="payment-policy-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-5 text-center mb-3">
+                  <h5 class="text-danger">TERMS & CONDITIONS</h5>
+                  <h2>Our Terms & Conditions for you</h2>
+                </div>
+              </div>
+         
+          
+            
+     
+          <!-- Refund Policy -->
+          <div class="refund-policy">
+            <h2>1. Liability and Limitations</h2>
+    <p>{{BusinessName}} will take reasonable precautions to ensure that your shipment reaches its destination safely. However, the company will not be liable for any loss, damage, delay, misdelivery, or non-delivery due to the following circumstances:</p>
+    <ul>
+        <li><strong>Acts of God:</strong> This includes natural disasters such as floods, earthquakes, or storms.</li>
+        <li><strong>Acts of War or Terrorism:</strong> Any hostile acts or disruptions caused by conflict or terrorism.</li>
+        <li><strong>Labor Disruptions:</strong> Strikes, civil disturbances, or any related activities.</li>
+        <li><strong>Government Compliance:</strong> Delays or losses due to compliance with government regulations or orders.</li>
+        <li><strong>Packaging Issues:</strong> Improper or insufficient packaging provided by the customer.</li>
+        <li><strong>Inherent Defects:</strong> Defects or the perishable nature of the items being shipped.</li>
+    </ul>
+
+    <h2>2. Maximum Liability</h2>
+    <p>{{BusinessName}}’s maximum liability for any loss or damage to a shipment is limited to:</p>
+    <ul>
+        <li>The actual cash value of the items in the shipment, or</li>
+        <li>The declared value provided by the customer at the time of booking,</li>
+        <li>Or a maximum of [insert currency and amount], whichever is lesser.</li>
+    </ul>
+    <p>The company will not be liable for any indirect, incidental, or consequential damages.</p>
+
+    <h2>3. Payment Terms</h2>
+    <p>{{BusinessName}} accepts payment either at the time of delivery or before delivery. Without full payment, the company will not release the parcel to the recipient. {{BusinessName}} is not responsible for any delays caused by payment issues or delays in processing.</p>
+
+    <h2>4. Prohibited Items</h2>
+    <p>Certain items are prohibited from being shipped through {{BusinessName}}, including but not limited to:</p>
+    <ul>
+        <li>Hazardous materials</li>
+        <li>Illegal substances</li>
+        <li>Items restricted by local laws</li>
+    </ul>
+    <p>Customers are responsible for ensuring that their shipments comply with local, state, and national regulations. {{BusinessName}} reserves the right to refuse the shipment of any items that violate these terms.</p>
+
+    <h2>5. Amendments to Terms</h2>
+    <p>{{BusinessName}} reserves the right to update or modify these Terms and Conditions at any time without prior notice. Any changes will be posted on our website and will take immediate effect.</p>
+
+    <h2>6. Contact Information</h2>
+    <p>If you have any questions or concerns about these terms, please contact us at:</p>
+    <p><strong>{{BusinessName}}</strong><br>
+   </p>
+    <li><strong>Email:</strong><a id="alink" href="mailto:{{support_email}}"> {{support_email}}</a></li>
+                          <li><strong>Phone:</strong><a id="alink" href="tel:{{contact_no}}">{{contact_no}}</a> </li>
+                        
+</div>
+          
+</div>
+</section>      
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="callback">
+
+        <div class="container">
+            <div class="row text-center">
+                <h5 class="text-danger">CONTACT US</h5>
+                
+              </div>
+          <div class="row justify-content-center">
+            
+            <div class="col-md-6 col-lg-5 col-xl-4"><img src="assets/img/illustrations/callback.png" alt="..." />
+              <h5 class="text-danger">REQUEST A CALLBACK</h5>
+              <h2>We will contact in the shortest time.</h2>
+              <p class="text-muted">Monday to Friday, 9am-5pm.</p>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <form class="row">
+                <div class="mb-3">
+                  <label class="form-label visually-hidden" for="inputName">Name</label>
+                  <input class="form-control form-quriar-control" [(ngModel)]="data.customer_name" name="customer_name" id="inputName" type="text" placeholder="Name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label visually-hidden" for="inputEmail">Another label</label>
+                  <input class="form-control form-quriar-control" id="inputEmail" [(ngModel)]="data.customer_email" name="customer_email" type="email" placeholder="Email" />
+                </div>
+                <div class="mb-5">
+                  <label class="form-label visually-hidden" for="validationTextarea">Message</label>
+                  <textarea class="form-control form-quriar-control is-invalid border-400" [(ngModel)]="data.message" name="data.message" id="validationTextarea" placeholder="Message" style="height: 150px" required="required"></textarea>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-primary" type="button" (click)="send_message()">Send Message<i class="fa fa-paper-plane ms-2"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="findUs">
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5 mb-6 text-center">
+              <h5 class="text-danger">FIND US</h5>
+              <h2>Access us easily</h2>
+            </div>
+            <div class="col-12">
+              <div class="card card-span rounded-2 mb-3">
+                <div class="row">
+                  <div class="col-md-6 col-lg-7 d-flex">
+                    <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=17.945831,73.975628+(Om%20Distributer)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps devices</a></iframe></div>
+                  </div>
+                  <div class="col-md-6 col-lg-5 d-flex flex-center">
+                    <div class="card-body" style="vertical-align: baseline;">
+                      <h5>Contact with us</h5>
+                      <p class="text-700 my-4" style="text-align: justify;"> <span>{{businessAddress}}</span></p>
+                      <p><span class="text-700">Monday - Friday: 10 am - 10pm<br/></span></p>
+                      <p><a class="text-700" >{{support_email}}</a></p>
+                      <!-- <ul class="list-unstyled list-inline mt-5">
+                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fs-2"></i></a></li>
+                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram-square fs-2"></i></a></li>
+                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fs-2"></i></a></li>
+                      </ul> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary px-5" type="submit"><i class="fa fa-phone-alt me-2"></i><a class="text-light" href="tel:contact_no">Call us to delivery {{contact_no}}</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <!-- <section class="bg-1000">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="fw-bold text-white">Get an update every week</h2>
+              <p class="text-300">We ensure that your product is delivered in the safest possible<br />manner, at the correct location, at the right time.</p>
+            </div>
+            <div class="col-lg-6">
+              <h5 class="text-primary mb-3">SUBSCRIBE TO NEWSLETTER </h5>
+              <form class="row gx-2 gy-2 align-items-center">
+                <div class="col">
+                  <div class="input-group-icon">
+                    <label class="visually-hidden" for="inputEmailCta">Address</label>
+                    <input class="form-control input-box form-quriar-control text-light" id="inputEmailCta" type="email" placeholder="Enter your mail" />
+                  </div>
+                </div>
+                <div class="d-grid gap-3 col-sm-auto">
+                  <button class="btn btn-danger" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    
+      </section> -->
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-900 pb-0 pt-5">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#">
+                {{BusinessName}}
+                <!-- <img src="assets/img/gallery/footer-logo.png" height="51" alt="" /> -->
+            </a>
+              <p class="text-500 my-4">At {{BusinessName}}, we are committed to delivering reliable, fast, and efficient courier services across the region. With years of experience in logistics and customer satisfaction, we strive to connect people and businesses through timely deliveries..</p>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
+              <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Other links </h5>
+              <ul class="list-unstyled mb-md-4 mb-lg-0">
+                <li class="lh-lg"><a class="text-500" href="#services">Our Services</a></li>
+                <li class="lh-lg"><a class="text-500" href="#aboutus">About Us</a></li>
+                <li class="lh-lg"><a class="text-500" href="#policy">Policy</a></li>
+                <li class="lh-lg"><a class="text-500" href="#conditions">Terms & Conditions</a></li>
+             
+              </ul>
+            </div>
+         
+            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
+              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif"> Customer Care</h5>
+              <ul class="list-unstyled mb-md-4 mb-lg-0">
+                <li class="lh-lg"><a class="text-500" href="#findUs">Contact Us</a></li>
+                <li class="lh-lg"><a class="text-500" href="#findUs">Find US</a></li>
+             
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-0 bg-1000">
+
+        <div class="container">
+          <div class="row justify-content-md-between justify-content-evenly py-4">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+              <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; {{BusinessName}}, 2024</p>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6">
+          
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <!-- <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script> -->
+  

@@ -1,0 +1,67 @@
+<div class="overlay" *ngIf="projectPopUp" >
+    <div class="popup">
+        <div class="col text-center">
+            <h2>
+                {{(modalType=="refund")?"REFUND RQUEST":(modalType=="cancel")?"CANCEL REQUEST":"QUOTATION REQUEST"}}
+            </h2>
+        </div>
+      <div class="popup-body">
+
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" [(ngModel)]="data.name" name="user_name" class="form-control" id="name" placeholder="Enter your Full Name" />
+        </div>
+
+        <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" [(ngModel)]="data.email" name="email" class="form-control" id="email" placeholder="Enter Your Email" />
+        </div>
+        
+        <div class="form-group">
+            <label>Your Contact</label>
+            <input type="number" [(ngModel)]="data.contact" name="contact" class="form-control" id="contact" placeholder="Enter Your Contact" />
+        </div>
+        <ng-container *ngIf="modalType=='cancel' || modalType=='refund'">
+            <div class="form-group">
+                <label>Tracking Number</label>
+                <input type="text" [(ngModel)]="data.tracking" name="tracking" class="form-control" id="tracking" placeholder="Enter Your Tracking Id" />
+            </div>
+        </ng-container>
+        <ng-container *ngIf="modalType=='quote'">
+        <div class="form-group">
+            <label for="serviceType">Service Type</label>
+            <select class="form-select" [(ngModel)]="data.service" name="service_type" id="serviceType">
+              <option value="daily">Daily Couries</option>
+              <option value="on_demand">On Demand Couries</option>
+              <option value="personal">Personal Couries</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="serviceType">Select City</label>
+            <select class="form-select" [(ngModel)]="data.city" name="city" id="city">
+              <option value="daily">Daily Couries</option>
+              <option value="on_demand">On Demand Couries</option>
+              <option value="personal">Personal Couries</option>
+            </select>
+          </div>
+        </ng-container>
+          <div class="form-group">
+            <label>{{(modalType=="refund")?"Explain Your Issue ":(modalType=="cancel")?"Reason For Cancel":"Describe Your Requirement"}}</label>
+            <textarea type="text" [(ngModel)]="data.message" name="message" class="form-control" id="message"  >
+            </textarea>
+        </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="getQuote()">Submit</button>
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  
